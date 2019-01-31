@@ -3,13 +3,6 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation project(':DevSupJava')
-    implementation project(':CampfireApi')
-}
-
-jar {
-    from {
-        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
-    }
 }
 
 sourceCompatibility = "1.8"

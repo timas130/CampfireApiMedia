@@ -1,7 +1,7 @@
 package com.dzen.campfire.api_media.requests
 
-import com.dzen.campfire.api.tools.client.ApiClient
-import com.dzen.campfire.api.tools.client.Request
+import com.sup.dev.java.libs.api_simple.client.ApiClient
+import com.sup.dev.java.libs.api_simple.client.Request
 import com.sup.dev.java.libs.json.Json
 
 open class RResourcesGet(
@@ -14,7 +14,7 @@ open class RResourcesGet(
     }
 
     override fun jsonSub(inp: Boolean, json: Json) {
-        resourceId = json.m(inp, "resourceId", resourceId)
+        resourceId = json.m(inp, "resourceId", resourceId)?:0
     }
 
     override fun instanceResponse(data:ByteArray): Response {

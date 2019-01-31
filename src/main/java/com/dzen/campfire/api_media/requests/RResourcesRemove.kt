@@ -1,6 +1,6 @@
 package com.dzen.campfire.api_media.requests
 
-import com.dzen.campfire.api.tools.client.Request
+import com.sup.dev.java.libs.api_simple.client.Request
 import com.sup.dev.java.libs.json.Json
 
 open class RResourcesRemove(
@@ -8,7 +8,7 @@ open class RResourcesRemove(
 ) : Request<RResourcesRemove.Response>() {
 
     override fun jsonSub(inp: Boolean, json: Json) {
-        resourceId = json.m(inp, "resourceId", resourceId)
+        resourceId = json.m(inp, "resourceId", resourceId)!!
     }
 
     override fun instanceResponse(json:Json): Response {

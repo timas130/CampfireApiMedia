@@ -5,13 +5,14 @@ import com.sup.dev.java.libs.api_simple.client.TokenProvider
 import java.io.File
 
 class APIMedia(
+        projectKey:String,
         tokenProvider: TokenProvider,
         host: String,
         portHttps: Int,
         portCertificate: Int,
         saver: (String, String?) -> Unit,
         loader: (String) -> String?
-) : ApiClient(tokenProvider, host, portHttps, portCertificate, saver, loader) {
+) : ApiClient(projectKey, tokenProvider, host, portHttps, portCertificate, saver, loader) {
 
     companion object {
 

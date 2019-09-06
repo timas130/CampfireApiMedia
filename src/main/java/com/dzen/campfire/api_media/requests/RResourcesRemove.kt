@@ -8,7 +8,7 @@ open class RResourcesRemove(
 ) : Request<RResourcesRemove.Response>() {
 
     override fun jsonSub(inp: Boolean, json: Json) {
-        resourceId = json.m(inp, "resourceId", resourceId)!!
+        resourceId = json.m(inp, "resourceId", resourceId)
     }
 
     override fun instanceResponse(json:Json): Response {

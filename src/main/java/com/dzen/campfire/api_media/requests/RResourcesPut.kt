@@ -1,13 +1,11 @@
 package com.dzen.campfire.api_media.requests
 
-import com.dzen.campfire.api.tools.client.Request
+import com.sup.dev.java.libs.api_simple.client.Request
 import com.sup.dev.java.libs.json.Json
 
 open class RResourcesPut(
         var resource: ByteArray?,
-        var publicationId: Long,
-        var resourceId: Long = 0,
-        var tag: String = ""
+        var resourceId: Long = 0
 ) : Request<RResourcesPut.Response>() {
 
     init {
@@ -20,8 +18,6 @@ open class RResourcesPut(
 
     override fun jsonSub(inp: Boolean, json: Json) {
         resourceId = json.m(inp, "resourceId", resourceId)
-        publicationId = json.m(inp, "publicationId", publicationId)
-        tag = json.m(inp, "tag", tag)
     }
 
     override fun instanceResponse(json:Json): Response {

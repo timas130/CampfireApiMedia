@@ -14,7 +14,7 @@ open class RResourcesGet(
     }
 
     override fun jsonSub(inp: Boolean, json: Json) {
-        resourceId = json.m(inp, "resourceId", resourceId)?:0
+        resourceId = json.m(inp, "resourceId", resourceId)
     }
 
     override fun instanceResponse(data:ByteArray): Response {

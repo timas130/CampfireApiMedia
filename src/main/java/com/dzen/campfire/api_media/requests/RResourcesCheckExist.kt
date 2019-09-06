@@ -8,7 +8,7 @@ open class RResourcesCheckExist(
 ) : Request<RResourcesCheckExist.Response>() {
 
     override fun jsonSub(inp: Boolean, json: Json) {
-        resourceId = json.m(inp, "resourceId", resourceId)?:0
+        resourceId = json.m(inp, "resourceId", resourceId)
     }
 
     override fun instanceResponse(json:Json): Response {
@@ -28,7 +28,7 @@ open class RResourcesCheckExist(
         }
 
         override fun json(inp: Boolean, json: Json) {
-            exist = json.m(inp, "exist", exist)?:false
+            exist = json.m(inp, "exist", exist)
         }
 
     }

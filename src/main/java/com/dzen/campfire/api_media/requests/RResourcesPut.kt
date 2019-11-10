@@ -5,7 +5,8 @@ import com.sup.dev.java.libs.json.Json
 
 open class RResourcesPut(
         var resource: ByteArray?,
-        var resourceId: Long = 0
+        var resourceId: Long = 0,
+        var tag: String = ""
 ) : Request<RResourcesPut.Response>() {
 
     init {
@@ -18,6 +19,7 @@ open class RResourcesPut(
 
     override fun jsonSub(inp: Boolean, json: Json) {
         resourceId = json.m(inp, "resourceId", resourceId)
+        tag = json.m(inp, "tag", tag)
     }
 
     override fun instanceResponse(json:Json): Response {

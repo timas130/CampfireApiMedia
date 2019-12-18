@@ -1,7 +1,7 @@
 package com.dzen.campfire.api_media.requests
 
 
-import com.sup.dev.java.libs.api_simple.client.Request
+import com.dzen.campfire.api.tools.client.Request
 import com.sup.dev.java.libs.json.Json
 
 open class RResourcesReplace(

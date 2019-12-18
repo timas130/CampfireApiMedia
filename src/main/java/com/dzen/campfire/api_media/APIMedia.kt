@@ -1,8 +1,7 @@
 package com.dzen.campfire.api_media
 
-import com.sup.dev.java.libs.api_simple.client.ApiClient
-import com.sup.dev.java.libs.api_simple.client.TokenProvider
-import java.io.File
+import com.dzen.campfire.api.tools.client.ApiClient
+import com.dzen.campfire.api.tools.client.TokenProvider
 
 class APIMedia(
         projectKey:String,

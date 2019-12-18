@@ -3,6 +3,7 @@ apply plugin: 'kotlin'
 
 dependencies {
     implementation project(':DevSupJava')
+    implementation project(':CampfireApi')
 }
 
 sourceCompatibility = "1.8"

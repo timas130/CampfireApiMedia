@@ -16,6 +16,7 @@ class APIMedia(
     companion object {
 
         val PORT_HTTPS = 4023
+        val PORT_HTTP = 4022
         val PORT_CERTIFICATE = 4024
         val IP = "46.254.16.245"
         val VERSION = "1"

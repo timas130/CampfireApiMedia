@@ -19,6 +19,7 @@ class APIMedia(
         val PORT_HTTP = 4022
         val PORT_CERTIFICATE = 4024
         val IP = "46.254.16.245"
+//        val IP = "192.168.1.104"
         val VERSION = "1"
 
         val ERROR_GONE = "ERROR_GONE"

@@ -5,7 +5,8 @@ import com.dzen.campfire.api.tools.client.Request
 import com.sup.dev.java.libs.json.Json
 
 open class RResourcesGet(
-        var resourceId: Long
+        var resourceId: Long,
+        var pwd: String = "",
 ) : Request<RResourcesGet.Response>() {
 
     init {
@@ -15,6 +16,7 @@ open class RResourcesGet(
 
     override fun jsonSub(inp: Boolean, json: Json) {
         resourceId = json.m(inp, "resourceId", resourceId)
+        pwd = json.m(inp, "pwd", pwd)
     }
 
     override fun instanceResponse(data:ByteArray): Response {
